@@ -1,6 +1,6 @@
 # JavaScript Coading Practice 
 ## Arrays & Objects
-### Js-1
+### Js-1 [Arrays]
     1) **Create And Log An Array**
     let arr = ['Orange',25,100,true,33.58]
     console.log(arr)
@@ -84,3 +84,134 @@
     }
     let result = convertMinutesToSeconds(minutes);
     console.log(result);
+
+### Js-3 [object]
+    1)Create & log Object
+    let vehicle = {
+    name:"Mercedes Benz",
+    model:"C-Class",
+    manufacturer:"Daimler AG company",
+    length:"4686mm",
+    "cargo capacity":"12.6 cubic feet"
+    }
+    console.log(vehicle)
+    
+    2)Create & log Object -2
+    let movie = {
+    title:"Baahubali",
+    director:"Rajamouli",
+    producers:['Sobhu','Raghavendra','Prasad'],
+    "lead actors with their roles" : {
+        prabhas:"Baahubali",
+        anushka:"Devasena",
+        rana:"Bhallaladeva",
+        tamannah:"Avanthika"
+        }
+    }
+    console.log(movie)
+
+    3)Accessing the Object
+    let objectKey = readLine();
+    let person = {
+    name: "Sam",
+    age: 20,
+    greet: function () {
+      console.log("hello");
+    },
+    marks: {
+      science: 70,
+      math: 75
+    },
+    "languages known": ["telugu", "hindi", "english"]
+    };
+    console.log(person[objectKey])
+
+    4)Modifiy the object
+    let objectKey = readLine();
+    let val = JSON.parse(readLine().replace(/'/g, '"'));
+    let cat = {
+    name: "lizzie",
+    age: 18,
+    "fur color": "grey",
+    likes: ["catnip", "milk"],
+    birthday: { month: 7, day: 17, year: 1994 }
+    };
+    cat[objectKey]=val;
+    console.log(cat)
+
+    5)Add the new element to Object
+    let objectKey = readLine();
+    let val = JSON.parse(readLine().replace(/'/g, '"'));
+    let meals = {
+    breakfast: "Oatmeal",
+    lunch: "Burrito",
+    dinner: "Chapathi"
+    };
+    meals[objectKey]=val
+    console.log(meals
+
+    6)Make a person Object
+    let id = parseInt(readLine());
+    let name = readLine();
+    let email = readLine();
+    function makePersonObject(id,name,email){
+      let person ={
+          "id":id,
+          "name":name,
+          "email":email
+      }
+      return person
+    }
+    let personObject = makePersonObject(id, name, email);
+    console.log(personObject);
+
+    7)Find the Total Score [10,20,30]
+    let arrayOfScores = JSON.parse(readLine().replace(/'/g, '"'));
+    function calculateTotalScore(arrayOfScores){
+      let [first,secound,third]=arrayOfScores
+      let totalScore=first+secound+third
+      return totalScore
+    }
+    let totalScore = calculateTotalScore(arrayOfScores);
+    console.log(totalScore);
+
+    8)Make an array 1,2,3
+    let num1 = parseInt(readLine());
+    let num2 = parseInt(readLine());
+    let num3 = parseInt(readLine());
+    function makeAnArray(num1,num2,num3) {
+       return [num1,num2,num3]
+    }
+    let createdArray = makeAnArray(num1, num2, num3);
+    console.log(createdArray);
+
+    9)Eligibilty to play the next level of the game /{'name':mukesh,'score':4}
+    let person = JSON.parse(readLine().replace(/'/g, '"'));
+    function isEligibleForNextLevel(person) {
+     if(person['score'] > 5){
+         return true
+     }
+     else{
+         return false
+     }
+    }
+    let isPersonEligible = isEligibleForNextLevel(person);
+    console.log(isPersonEligible);
+
+    10)Game Mode /['muk']
+    let arrayOfFriends = JSON.parse(readLine().replace(/'/g, '"'));
+    let noOfFriends = arrayOfFriends.length
+    function getPreferredGameMode(noOfFriends){
+      if(noOfFriends===0){
+          return "Solo"
+      }
+      else if(noOfFriends===1){
+          return "Dual"
+      }
+      else{
+          return "Squad"
+      }
+    }
+    let gameMode = getPreferredGameMode(noOfFriends);
+    console.log(gameMode);
+    
