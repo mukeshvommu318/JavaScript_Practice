@@ -214,4 +214,96 @@
     }
     let gameMode = getPreferredGameMode(noOfFriends);
     console.log(gameMode);
+
+### OwnPractice - 1
+    1) How to Access the value : Array(object(value))
+    let todoList = [{text : "learn html"},{text:"learn css"}]
+    console.log(todoList[0].text)
+
+    2) Button Click Function Expression 
+    <!DOCTYPE html>
+    <html>
+      <head></head>
+      <body>        
+        <h1 id="heading">Baseball</h1>
+        <button onclick="changeHeading()">Change Heading</button>
+      </body>
+    </html>
+    let changeHeading = function() {
+      document.getElementById("heading").textContent = "Cricket";
+    };
+
+    3)Adding the elements using JavaScript
+    <!DOCTYPE html>
+    <html>
+      <head></head>
+      <body>
+        <div id="bgContainer"></div>
+      </body>
+    </html>
+    let myContainer = document.getElementById('bgContainer');
+    let technologiesArray = ["Artificial Intelligence", "Virtual Reality"];
+
+    function createAndAppendTechnology(technology){
+      let technologyItem = document.createElement("p");
+      technologyItem.textContent = technology;
+      myContainer.appendChild(technologyItem);
+    }
     
+    for(let technology of technologiesArray) {
+      createAndAppendTechnology(technology);
+    }
+
+### Js-5
+    1) Summ of the values of the Array
+    let myArray = JSON.parse(readLine().replace(/'/g, '"'));
+    let sum =0
+    for (let eachitem of myArray){
+          sum = sum+eachitem
+    }
+    console.log(sum)
+
+    2)Log the Values of each Object
+    let objectKey = readLine().replace(/'/g, '"');
+    let arrayOfInventions = [
+    {
+      name: "Printing Press",
+      "invented by": "Johannes Gutenberg",
+      year: 1440
+    },
+    {
+      name: "Light Bulb",
+      "invented by": "Thomas Edison",
+      year: 1879
+    },
+    {
+      name: "Telephone",
+      "invented by": "Alexander Graham Bell",
+      year: 1876
+    },
+    {
+      name: "Aeroplane",
+      "invented by": "Orville and Wilbur Wright",
+      year: 1903
+    },
+    {
+      name: "Computer",
+      "invented by": "Charles Babbage",
+      year: 1822
+    }
+    ];
+
+    for (let eachitem of arrayOfInventions){
+        console.log(eachitem[objectKey])
+    }
+
+    3)Eligibility to vote   i/p : [{'name':"mukesh",'age':34},{},{},...]
+    let arrayOfPersons = JSON.parse(readLine().replace(/'/g, '"'));
+
+      for (let each of arrayOfPersons){
+          if(each['age']>=18){
+              console.log(each['name'])
+          }
+       }
+
+     4)
