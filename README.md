@@ -312,6 +312,7 @@
                 function isValuePresent(myArray, val) {
                             return myArray.includes(val)
                 }
+                
     2) Find the First Occurance of the Value
                 function findFirstIndexOfValue(myArray, val) {
                       let index = myArray.findIndex(function(each){
@@ -324,6 +325,7 @@
                       })
                       return index
                     }
+                    
     3) Find the First Occurance of the String
                 function findFirstStringOccurrence(myArray) {
                   let index = myArray.findIndex(function(each){
@@ -341,6 +343,7 @@
                       return undefined
                   }
                 }
+                
     4) Add A Value to begnning of an Array
                 function main() {
                   let myArray = JSON.parse(readLine().replace(/'/g, '"'));
@@ -348,7 +351,16 @@
                   myArray.splice(0,0,val)
                   console.log(myArray)
                 }
+                
     5) Concatenate of Two Arrays 
                 function concatenateTwoArrays(firstArray, secondArray) {
                   return firstArray.concat(secondArray)
                 }
+
+### Js-7
+    1) Remove the first element in array
+     let removeVal = myArray.splice(0,1)
+      console.log(removeVal[0])
+      console.log(myArray)
+
+    2)
