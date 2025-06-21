@@ -306,4 +306,49 @@
           }
        }
 
-     4)
+
+### Js-6
+    1) Check the value present in array or not (if present it will return true or else false)
+                function isValuePresent(myArray, val) {
+                            return myArray.includes(val)
+                }
+    2) Find the First Occurance of the Value
+                function findFirstIndexOfValue(myArray, val) {
+                      let index = myArray.findIndex(function(each){
+                          if(each === val){
+                              return true
+                          }
+                          else{
+                              return false
+                          }
+                      })
+                      return index
+                    }
+    3) Find the First Occurance of the String
+                function findFirstStringOccurrence(myArray) {
+                  let index = myArray.findIndex(function(each){
+                      if(typeof(each)==="string"){
+                          return true
+                      }
+                      else{
+                          return false
+                      }
+                  })
+                  if(index !== -1){
+                      return myArray[index]
+                  }
+                  else{
+                      return undefined
+                  }
+                }
+    4) Add A Value to begnning of an Array
+                function main() {
+                  let myArray = JSON.parse(readLine().replace(/'/g, '"'));
+                  let val = JSON.parse(readLine().replace(/'/g, '"'));
+                  myArray.splice(0,0,val)
+                  console.log(myArray)
+                }
+    5) Concatenate of Two Arrays 
+                function concatenateTwoArrays(firstArray, secondArray) {
+                  return firstArray.concat(secondArray)
+                }
